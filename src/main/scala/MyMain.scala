@@ -1,5 +1,7 @@
 import chapter1.anatomytypeclass.printable.UsingLibrary
 import chapter1.meetcats.{EqEx, ShowEx}
+import chapter2.MonoidsInCats
+import chapter4.writer.WritersEx
 
 object MyMain {
 
@@ -9,5 +11,9 @@ object MyMain {
     UsingLibrary
     ShowEx
     EqEx
+    WritersEx
+
+    MonoidsInCats
+
   }
 }
