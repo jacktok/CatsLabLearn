@@ -26,7 +26,8 @@ object MonoidsInCats {
 
   def add[A: Monoid](item: List[A]): A = item.foldLeft(Monoid[A].empty)(_ |+| _)
 
-  val itemsOpts: List[Option[Int]] = List(123.some, 2323.some, 777.some)
+  val itemsOpts = List(123.some, 2323.some, 777.some, none[Int])
+
 
   println(s"some of $itemsOpts = ${add(itemsOpts)}")
 

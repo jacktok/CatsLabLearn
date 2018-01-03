@@ -1,9 +1,7 @@
 package chapter1.anatomytypeclass.json
 
 
-/**
-  * type class instance
-  */
+
 trait Json
 
 final case class JsObject(get: Map[String, Json]) extends Json
@@ -14,12 +12,14 @@ trait JsonWriter[A] {
   def write(value: A): Json
 }
 
+/**
+  * type class
+  */
+final case class Person(name: String, email: String)
 
 /**
   * type class instance
   */
-final case class Person(name: String, email: String)
-
 object JsonWriterInstance {
   implicit val stringJsonWriter = new JsonWriter[String] {
     def write(value: String): Json = JsString(value)

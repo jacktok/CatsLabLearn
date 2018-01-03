@@ -44,7 +44,7 @@ object WritersEx {
   println(s"writer => $writerTest")
 
   def slowly[A](body: => A) =
-    try body finally Thread.sleep(100)
+    try body finally Thread.sleep(0)
 
   def factorial(n: Int): Logged[Int] =
     for {
